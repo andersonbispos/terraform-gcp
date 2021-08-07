@@ -1,9 +1,9 @@
 terraform {
-  backend "gcs" {
-    # credentials = "/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json"
-    bucket = "qwiklabs-gcp-00-2b647290a8f9"
-    prefix = "terraform/state"
-  }
+  # backend "gcs" {
+  #   # credentials = "/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json"
+  #   bucket = "qwiklabs-gcp-00-2b647290a8f9"
+  #   prefix = "terraform/state"
+  # }
 
 
   # backend "local" {
@@ -47,48 +47,48 @@ module "instances" {
   zone       = var.zone
 }
 
-module "storage" {
-  source = "./modules/storage/"
+# module "storage" {
+#   source = "./modules/storage/"
 
-  project_id = var.project_id
-  region     = var.region
-  zone       = var.zone
-}
+#   project_id = var.project_id
+#   region     = var.region
+#   zone       = var.zone
+# }
 
-module "terraform-vpc" {
-  source = "terraform-google-modules/network/google"
-  # version = "~> 3.2.2"
+# module "terraform-vpc" {
+#   source = "terraform-google-modules/network/google"
+#   # version = "~> 3.2.2"
 
-  project_id   = var.project_id
-  network_name = "terraform-vpc"
-  routing_mode = "GLOBAL"
+#   project_id   = var.project_id
+#   network_name = "terraform-vpc"
+#   routing_mode = "GLOBAL"
 
-  subnets = [
-    {
-      subnet_name   = "subnet-01"
-      subnet_ip     = "10.10.10.0/24"
-      subnet_region = var.region
-    },
-    {
-      subnet_name   = "subnet-02"
-      subnet_ip     = "10.10.20.0/24"
-      subnet_region = var.region
-    }
-  ]
-}
+#   subnets = [
+#     {
+#       subnet_name   = "subnet-01"
+#       subnet_ip     = "10.10.10.0/24"
+#       subnet_region = var.region
+#     },
+#     {
+#       subnet_name   = "subnet-02"
+#       subnet_ip     = "10.10.20.0/24"
+#       subnet_region = var.region
+#     }
+#   ]
+# }
 
-resource "google_compute_firewall" "default" {
-  name    = "tf-firewall"
-  network = var.network_name
-  source_ranges = ["0.0.0.0/0"]
+# resource "google_compute_firewall" "default" {
+#   name    = "tf-firewall"
+#   network = var.network_name
+#   source_ranges = ["0.0.0.0/0"]
 
-  allow {
-    protocol = "tcp"
-    ports    = ["80"]
-  }
+#   allow {
+#     protocol = "tcp"
+#     ports    = ["80"]
+#   }
 
-  #   allow {
-  #   protocol = "tcp"
-  #   ports    = ["22"]
-  # }
-}
+#   #   allow {
+#   #   protocol = "tcp"
+#   #   ports    = ["22"]
+#   # }
+# }

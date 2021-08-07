@@ -18,7 +18,7 @@ resource "google_compute_instance" "tf-instance-1" {
 
     network_interface {
         network = var.network_name
-        subnetwork = "subnet-01"
+        # subnetwork = "subnet-01"
 
         access_config {
             network_tier = "PREMIUM"
@@ -48,7 +48,7 @@ resource "google_compute_instance" "tf-instance-2" {
 
     network_interface {
         network            = var.network_name
-        subnetwork = "subnet-02"
+        # subnetwork = "subnet-02"
 
         access_config {
             network_tier = "PREMIUM"

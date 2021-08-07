@@ -12,8 +12,8 @@ variable "zone" {
 }
 
 variable "machine_type" {
-  # default = "n1-standard-1"
-  default = "n1-standard-2"
+  default = "n1-standard-1"
+  # default = "n1-standard-2"
 }
 
 variable "instances_image" {
@@ -21,6 +21,6 @@ variable "instances_image" {
 }
 
 variable "network_name" {
-  # default = "default"
-  default = "terraform-vpc"
+  default = "default"
+  # default = "terraform-vpc"
 }
