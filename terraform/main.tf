@@ -1,9 +1,9 @@
 terraform {
-  # backend "gcs" {
-  #   credentials = "/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json"
-  #   bucket = "dio-dataproc-lab"
-  #   prefix = "terraform/state"
-  # }
+  backend "gcs" {
+    # credentials = "/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json"
+    bucket = "dio-dataproc-lab"
+    prefix = "terraform/state"
+  }
 
 
   # backend "local" {
