@@ -42,14 +42,14 @@ module "instances" {
   instances_image = var.instances_image
   network_name    = var.network_name
 
-  project = var.project_id
+  project_id = var.project_id
   region  = var.region
   zone    = var.zone
 }
 
 # module "storage" {
 #   source = "./modules/storage/"
-    # project = var.project_id
+    # project_id = var.project_id
     # region  = var.region
     # zone    = var.zone
 # }
