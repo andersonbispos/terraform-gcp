@@ -43,15 +43,15 @@ module "instances" {
   network_name    = var.network_name
 
   project_id = var.project_id
-  region  = var.region
-  zone    = var.zone
+  region     = var.region
+  zone       = var.zone
 }
 
 # module "storage" {
 #   source = "./modules/storage/"
-    # project_id = var.project_id
-    # region  = var.region
-    # zone    = var.zone
+# project_id = var.project_id
+# region  = var.region
+# zone    = var.zone
 # }
 
 # module "terraform-vpc" {
