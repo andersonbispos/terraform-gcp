@@ -43,9 +43,9 @@ module "instances" {
   network_name    = var.network_name
 }
 
-# module "storage" {
-#   source = "./modules/storage/"
-# }
+module "storage" {
+  source = "./modules/storage/"
+}
 
 # module "terraform-vpc" {
 #   source = "terraform-google-modules/network/google"
