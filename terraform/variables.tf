@@ -1,6 +1,6 @@
 variable "project_id" {
   description = "The project ID to host the network in"
-  default     = "dio-dataproc-lab"
+  default     = "qwiklabs-gcp-00-2b647290a8f9"
 }
 
 variable "region" {
