@@ -56,30 +56,30 @@ resource "google_compute_instance" "tf-instance-2" {
     }
 }
 
-resource "google_compute_instance" "tf-instance-3" {
-    name                    = "tf-instance-3"
-    machine_type            = var.machine_type
-    project                 = var.project_id
-    zone                    = var.zone
+# resource "google_compute_instance" "tf-instance-3" {
+#     name                    = "tf-instance-3"
+#     machine_type            = var.machine_type
+#     project                 = var.project_id
+#     zone                    = var.zone
 
-        metadata_startup_script = <<-EOT
-            #!/bin/bash
-        EOT
+#         metadata_startup_script = <<-EOT
+#             #!/bin/bash
+#         EOT
 
-    allow_stopping_for_update = true
+#     allow_stopping_for_update = true
 
-    boot_disk {
-        initialize_params {
-            image  = var.instances_image
-        }
-    }
+#     boot_disk {
+#         initialize_params {
+#             image  = var.instances_image
+#         }
+#     }
 
-    network_interface {
-        network            = var.network_name
-        # subnetwork = "subnet-02"
+#     network_interface {
+#         network            = var.network_name
+#         # subnetwork = "subnet-02"
 
-        access_config {
-            network_tier = "PREMIUM"
-        }
-    }
-}
+#         access_config {
+#             network_tier = "PREMIUM"
+#         }
+#     }
+# }
