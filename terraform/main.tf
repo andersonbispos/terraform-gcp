@@ -20,7 +20,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json")
+  # credentials = file("/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json")
 
   project = var.project_id
   region  = var.region
@@ -28,7 +28,7 @@ provider "google" {
 }
 
 provider "google-beta" {
-  credentials = file("/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json")
+  # credentials = file("/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json")
 
   project = var.project_id
   region  = var.region
