@@ -69,13 +69,13 @@ module "terraform-vpc" {
   ]
 }
 
-# resource "google_compute_firewall" "default" {
-#   name    = "tf-firewall"
-#   network = var.network_name
-#   source_ranges = ["0.0.0.0/0"]
+resource "google_compute_firewall" "default" {
+  name    = "tf-firewall"
+  network = var.network_name
+  source_ranges = ["0.0.0.0/0"]
 
-#   allow {
-#     protocol = "tcp"
-#     ports    = ["80"]
-#   }
-# }
+  allow {
+    protocol = "tcp"
+    ports    = ["80"]
+  }
+}
