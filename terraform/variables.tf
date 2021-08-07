@@ -12,8 +12,8 @@ variable "zone" {
 }
 
 variable "machine_type" {
-  default = "n1-standard-1"
-  # default = "n1-standard-2"
+  # default = "n1-standard-1"
+  default = "n1-standard-2"
 }
 
 variable "instances_image" {
