@@ -20,5 +20,6 @@ variable "instances_image" {
 }
 
 variable "network_name" {
-  default = "terraform-vpc"
+  default = "default"
+  # default = "terraform-vpc"
 }
