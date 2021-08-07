@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     # credentials = "/Users/anderson/Documents/dio-dataproc-lab-e1b29a12c8e1.json"
-    bucket = "dio-dataproc-lab"
+    bucket = "qwiklabs-gcp-00-2b647290a8f9"
     prefix = "terraform/state"
   }
 
