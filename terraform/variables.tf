@@ -12,7 +12,7 @@ variable "zone" {
 }
 
 variable "machine_type" {
-  default = "e2-micro"
+  default = "n1-standard-1"
   # default = "n1-standard-2"
 }
 
